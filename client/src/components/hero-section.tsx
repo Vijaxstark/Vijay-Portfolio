@@ -93,7 +93,7 @@ export function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            Building intelligent systems with deep learning, computer vision, and multi-modal AI
+            Specialized in deep learning, computer vision, and multi-modal AI systems
           </motion.p>
           
           <motion.div

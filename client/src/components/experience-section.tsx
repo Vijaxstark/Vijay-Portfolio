@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import auvRobotImage from "@assets/Screenshot 2025-07-05 132032_1751702155178.png";
 
 const experiences = [
   {
@@ -18,11 +19,12 @@ const experiences = [
     company: "AUV Society, IIITDM",
     period: "July 2022 – June 2024",
     description: [
-      "Led a 22-member team (Team Nira) in building an autonomous underwater vehicle from ground up",
-      "Designed core mechanical components and developed real-time object detection pipelines using YOLO",
-      "Participated as finalists in SAUVC 2024, presenting a fully functional AUV"
+      "Led 22-member team (Team Nira) building autonomous underwater vehicle from ground up",
+      "Designed mechanical components and developed real-time YOLO object detection pipelines",
+      "SAUVC 2024 finalists - presented fully functional AUV at international competition"
     ],
-    color: "electric-purple"
+    color: "electric-purple",
+    image: auvRobotImage
   },
   {
     title: "Research Intern",
@@ -73,6 +75,15 @@ export function ExperienceSection() {
                 
                 <Card className="glass-card rounded-xl">
                   <CardContent className="p-6">
+                    {experience.image && (
+                      <div className="mb-4 overflow-hidden rounded-lg">
+                        <img
+                          src={experience.image}
+                          alt="AUV Robot - Team Nira"
+                          className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                        />
+                      </div>
+                    )}
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                       <h3 className={`text-xl font-bold ${
                         experience.color === "neon-cyan" 

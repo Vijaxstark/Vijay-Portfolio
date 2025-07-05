@@ -7,14 +7,14 @@ const publications = [
     title: "Creep Life Prediction for Superalloys using Gradient Boosting Decision Trees",
     date: "Dec 2024",
     venue: "CICT 2024, IIIT Allahabad",
-    description: "Built and evaluated multiple regression models for predicting creep life of superalloys; gradient boosting decision trees (GBDT) outperformed other methods in terms of accuracy and generalization.",
+    description: "Regression models for predicting creep life of superalloys using GBDT for accuracy and generalization.",
     color: "neon-cyan"
   },
   {
     title: "Biomimetic Seasnail Soft Robot for Underwater Exploration",
     date: "Mar 2025 (Accepted)",
     venue: "International Symposium on Underwater Technology (UT 2025), Taiwan",
-    description: "Proposed a soft robotic platform integrating YOLOv11-based object detection for underwater trash identification.",
+    description: "Soft robotic platform with YOLOv11-based object detection for underwater trash identification.",
     color: "electric-purple"
   }
 ];
@@ -42,7 +42,7 @@ export function PublicationsSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="glass-card rounded-xl h-full hover:shadow-xl transition-all">
+              <Card className="glass-card rounded-xl h-full hover:shadow-xl transition-all cursor-pointer">
                 <CardContent className="p-6">
                   <div className="mb-4">
                     <FileText className={`h-8 w-8 mb-2 ${

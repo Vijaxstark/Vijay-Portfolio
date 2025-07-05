@@ -54,8 +54,7 @@ export function ContactSection() {
                       transition={{ duration: 0.6, delay: 0.3 }}
                       viewport={{ once: true }}
                     >
-                      I'm always interested in discussing new opportunities, collaborations, or innovative projects 
-                      in machine learning and computer vision. Feel free to reach out!
+                      Let's connect or collaborate on ML/CV projects and innovative research opportunities!
                     </motion.p>
                     <motion.div
                       className="space-y-4"

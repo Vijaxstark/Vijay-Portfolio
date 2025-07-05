@@ -11,7 +11,7 @@ export function Footer() {
           viewport={{ once: true }}
         >
           <p className="text-[hsl(210,40%,89%)] mb-2">
-            © 2024 Vijay Krishna R V. All rights reserved.
+            © 2025 Vijay Krishna R V. All rights reserved.
           </p>
           <p className="text-[hsl(210,40%,89%)] text-sm">
             Built with passion and precision.

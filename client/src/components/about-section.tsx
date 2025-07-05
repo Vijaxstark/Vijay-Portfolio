@@ -52,8 +52,8 @@ export function AboutSection() {
                       transition={{ duration: 0.6, delay: 0.3 }}
                       viewport={{ once: true }}
                     >
-                      I'm a passionate machine learning engineer with a strong foundation in applied ML, deep learning, and computer vision. 
-                      I specialize in building models for prediction, image segmentation, and real-time detection across varied problem statements.
+                      Passionate ML engineer specializing in deep learning, computer vision, and multi-modal AI systems. 
+                      Currently exploring inverse materials discovery and underwater robotics applications.
                     </motion.p>
                     <motion.p
                       className="text-[hsl(210,40%,89%)] mb-6 leading-relaxed"
@@ -62,9 +62,8 @@ export function AboutSection() {
                       transition={{ duration: 0.6, delay: 0.4 }}
                       viewport={{ once: true }}
                     >
-                      Currently exploring multi-modal AI, with an interest in developing systems that can interpret and connect information 
-                      across text, images, and structured data. I'm pursuing my B.Tech in Mechanical Engineering with a Minor in Machine Learning 
-                      from IIITDM Kancheepuram (CGPA: 8.78/10).
+                      B.Tech in Mechanical Engineering with Minor in ML from IIITDM Kancheepuram (CGPA: 8.78/10). 
+                      Published researcher with international competition experience.
                     </motion.p>
                     <motion.div
                       className="flex flex-wrap gap-2"
@@ -74,13 +73,19 @@ export function AboutSection() {
                       viewport={{ once: true }}
                     >
                       <Badge className="bg-[hsl(193,100%,50%)]/20 text-[hsl(193,100%,50%)] border-[hsl(193,100%,50%)]/30">
-                        Deep Learning
+                        PyTorch
                       </Badge>
                       <Badge className="bg-[hsl(258,84%,67%)]/20 text-[hsl(258,84%,67%)] border-[hsl(258,84%,67%)]/30">
-                        Computer Vision
+                        YOLO
                       </Badge>
                       <Badge className="bg-[hsl(193,100%,50%)]/20 text-[hsl(193,100%,50%)] border-[hsl(193,100%,50%)]/30">
-                        Multi-modal AI
+                        Transformers
+                      </Badge>
+                      <Badge className="bg-[hsl(258,84%,67%)]/20 text-[hsl(258,84%,67%)] border-[hsl(258,84%,67%)]/30">
+                        OpenCV
+                      </Badge>
+                      <Badge className="bg-[hsl(193,100%,50%)]/20 text-[hsl(193,100%,50%)] border-[hsl(193,100%,50%)]/30">
+                        U-Net
                       </Badge>
                     </motion.div>
                   </div>

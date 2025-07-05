@@ -26,7 +26,7 @@ const skillCategories = [
     title: "Tools & Frameworks",
     icon: Wrench,
     skills: [
-      "Git", "SQL", "Docker", "FastAPI", "W&B"
+      "Git", "SQL", "Docker", "FastAPI", "W&B", "PyTorch Lightning"
     ]
   }
 ];
