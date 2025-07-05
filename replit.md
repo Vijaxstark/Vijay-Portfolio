@@ -94,7 +94,7 @@ The application follows a full-stack architecture with clear separation between 
 
 Changelog:
 - July 04, 2025. Initial setup
-- July 05, 2025. Updated portfolio content to be more concise with shorter descriptions and clickable cards. Added AUV robot image to experience section. Made design more modern and tech-focused with improved user experience.
+- July 05, 2025. Updated portfolio content to be more concise with shorter descriptions and clickable cards. Added AUV robot image to experience section. Made design more modern and tech-focused with improved user experience. Added user's profile photo and IEEE publication link. Reordered sections: About, Experience, Projects, Publications, Skills.
 
 ## User Preferences
 
