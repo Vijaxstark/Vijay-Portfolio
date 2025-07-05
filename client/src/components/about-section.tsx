@@ -26,17 +26,8 @@ export function AboutSection() {
           >
             <Card className="glass-card rounded-xl">
               <CardContent className="p-8 md:p-12">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div className="order-2 md:order-1">
-                    <motion.img
-                      src={profileImage}
-                      alt="Vijay Krishna R V - Professional portrait"
-                      className="rounded-xl shadow-lg w-full h-auto"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </div>
-                  <div className="order-1 md:order-2">
+                <div className="grid md:grid-cols-3 gap-8 items-center">
+                  <div className="order-1 md:order-2 md:col-span-2">
                     <motion.h3
                       className="text-2xl font-bold mb-4 text-[hsl(193,100%,50%)]"
                       initial={{ opacity: 0 }}
@@ -66,29 +57,15 @@ export function AboutSection() {
                       B.Tech in Mechanical Engineering with Minor in ML from IIITDM Kancheepuram (CGPA: 8.78/10). 
                       Published researcher with international competition experience.
                     </motion.p>
-                    <motion.div
-                      className="flex flex-wrap gap-2"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.5 }}
-                      viewport={{ once: true }}
-                    >
-                      <Badge className="bg-[hsl(193,100%,50%)]/20 text-[hsl(193,100%,50%)] border-[hsl(193,100%,50%)]/30">
-                        PyTorch
-                      </Badge>
-                      <Badge className="bg-[hsl(258,84%,67%)]/20 text-[hsl(258,84%,67%)] border-[hsl(258,84%,67%)]/30">
-                        YOLO
-                      </Badge>
-                      <Badge className="bg-[hsl(193,100%,50%)]/20 text-[hsl(193,100%,50%)] border-[hsl(193,100%,50%)]/30">
-                        Transformers
-                      </Badge>
-                      <Badge className="bg-[hsl(258,84%,67%)]/20 text-[hsl(258,84%,67%)] border-[hsl(258,84%,67%)]/30">
-                        OpenCV
-                      </Badge>
-                      <Badge className="bg-[hsl(193,100%,50%)]/20 text-[hsl(193,100%,50%)] border-[hsl(193,100%,50%)]/30">
-                        U-Net
-                      </Badge>
-                    </motion.div>
+                  </div>
+                  <div className="order-2 md:order-1">
+                    <motion.img
+                      src={profileImage}
+                      alt="Vijay Krishna R V - Professional portrait"
+                      className="rounded-xl shadow-lg w-full h-auto max-w-sm mx-auto"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    />
                   </div>
                 </div>
               </CardContent>
