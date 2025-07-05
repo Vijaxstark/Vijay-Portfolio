@@ -75,15 +75,6 @@ export function ExperienceSection() {
                 
                 <Card className="glass-card rounded-xl">
                   <CardContent className="p-6">
-                    {experience.image && (
-                      <div className="mb-4 overflow-hidden rounded-lg">
-                        <img
-                          src={experience.image}
-                          alt="AUV Robot - Team Nira"
-                          className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
-                        />
-                      </div>
-                    )}
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                       <h3 className={`text-xl font-bold ${
                         experience.color === "neon-cyan" 
@@ -99,14 +90,39 @@ export function ExperienceSection() {
                     <h4 className="text-lg font-semibold mb-4 text-white">
                       {experience.company}
                     </h4>
-                    <ul className="text-[hsl(210,40%,89%)] space-y-2">
-                      {experience.description.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start">
-                          <span className="text-[hsl(193,100%,50%)] mr-2">•</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    
+                    {experience.image ? (
+                      <div className="grid md:grid-cols-3 gap-6 items-start">
+                        <div className="md:col-span-2">
+                          <ul className="text-[hsl(210,40%,89%)] space-y-2">
+                            {experience.description.map((item, itemIndex) => (
+                              <li key={itemIndex} className="flex items-start">
+                                <span className="text-[hsl(193,100%,50%)] mr-2">•</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="order-first md:order-last">
+                          <div className="overflow-hidden rounded-lg aspect-square">
+                            <img
+                              src={experience.image}
+                              alt="AUV Robot - Team Nira"
+                              className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <ul className="text-[hsl(210,40%,89%)] space-y-2">
+                        {experience.description.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start">
+                            <span className="text-[hsl(193,100%,50%)] mr-2">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
