@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, University } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { FileText, University, ExternalLink } from "lucide-react";
 
 const publications = [
   {
@@ -8,7 +9,8 @@ const publications = [
     date: "Dec 2024",
     venue: "CICT 2024, IIIT Allahabad",
     description: "Regression models for predicting creep life of superalloys using GBDT for accuracy and generalization.",
-    color: "neon-cyan"
+    color: "neon-cyan",
+    link: "https://ieeexplore.ieee.org/document/10899585"
   },
   {
     title: "Biomimetic Seasnail Soft Robot for Underwater Exploration",
@@ -64,13 +66,29 @@ export function PublicationsSection() {
                   <p className="text-[hsl(210,40%,89%)] mb-4 leading-relaxed">
                     {publication.description}
                   </p>
-                  <div className={`flex items-center text-sm ${
+                  <div className={`flex items-center justify-between ${
                     publication.color === "neon-cyan" 
                       ? "text-[hsl(193,100%,50%)]" 
                       : "text-[hsl(258,84%,67%)]"
                   }`}>
-                    <University className="h-4 w-4 mr-2" />
-                    {publication.venue}
+                    <div className="flex items-center text-sm">
+                      <University className="h-4 w-4 mr-2" />
+                      {publication.venue}
+                    </div>
+                    {publication.link && (
+                      <Button
+                        size="sm"
+                        onClick={() => window.open(publication.link, '_blank')}
+                        className={`${
+                          publication.color === "neon-cyan"
+                            ? "bg-[hsl(193,100%,50%)]/20 text-[hsl(193,100%,50%)] hover:bg-[hsl(193,100%,50%)]/30 border-[hsl(193,100%,50%)]/30"
+                            : "bg-[hsl(258,84%,67%)]/20 text-[hsl(258,84%,67%)] hover:bg-[hsl(258,84%,67%)]/30 border-[hsl(258,84%,67%)]/30"
+                        } border`}
+                      >
+                        <ExternalLink className="h-3 w-3 mr-1" />
+                        View Paper
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>

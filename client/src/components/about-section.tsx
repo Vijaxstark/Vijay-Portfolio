@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import profileImage from "@assets/link_1751702466972.jpg";
 
 export function AboutSection() {
   return (
@@ -28,8 +29,8 @@ export function AboutSection() {
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="order-2 md:order-1">
                     <motion.img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                      alt="Professional portrait"
+                      src={profileImage}
+                      alt="Vijay Krishna R V - Professional portrait"
                       className="rounded-xl shadow-lg w-full h-auto"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
