@@ -10,21 +10,21 @@ const experiences = [
     description: [
       "Built regression-based models to predict creep life of nickel-based superalloys using compositional and microstructural features",
       "Results published at CICT 2024 conference",
-      "Currently designing an inverse materials discovery pipeline using conditional GANs"
+      "Currently designing an inverse materials discovery pipeline using conditional GANs",
     ],
-    color: "neon-cyan"
+    color: "neon-cyan",
   },
   {
     title: "Team Lead",
     company: "AUV Society, IIITDM",
     period: "July 2022 – June 2024",
     description: [
-      "Led 22-member team (Team Nira) building autonomous underwater vehicle from ground up",
+      "Led 22-member team (Team Saaral) building autonomous underwater vehicle from ground up",
       "Designed mechanical components and developed real-time YOLO object detection pipelines",
-      "SAUVC 2024 finalists - presented fully functional AUV at international competition"
+      "SAUVC 2024 finalists - presented fully functional AUV at international competition",
     ],
     color: "electric-purple",
-    image: auvRobotImage
+    image: auvRobotImage,
   },
   {
     title: "Research Intern",
@@ -32,15 +32,18 @@ const experiences = [
     period: "May 2023 – July 2023",
     description: [
       "Developed a time synchronization system using Raspberry Pi and Precision Time Protocol (PTP)",
-      "Improved coordination in industrial and robotic applications"
+      "Improved coordination in industrial and robotic applications",
     ],
-    color: "neon-cyan"
-  }
+    color: "neon-cyan",
+  },
 ];
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-[hsl(232,13%,12%)] to-[hsl(225,58%,8%)]">
+    <section
+      id="experience"
+      className="py-20 bg-gradient-to-br from-[hsl(232,13%,12%)] to-[hsl(225,58%,8%)]"
+    >
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text"
@@ -51,12 +54,12 @@ export function ExperienceSection() {
         >
           Experience
         </motion.h2>
-        
+
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[hsl(193,100%,50%)] to-[hsl(258,84%,67%)]"></div>
-            
+
             {experiences.map((experience, index) => (
               <motion.div
                 key={index}
@@ -67,20 +70,24 @@ export function ExperienceSection() {
                 viewport={{ once: true }}
               >
                 {/* Timeline dot */}
-                <div className={`absolute -left-10 w-4 h-4 rounded-full animate-pulse ${
-                  experience.color === "neon-cyan" 
-                    ? "bg-[hsl(193,100%,50%)]" 
-                    : "bg-[hsl(258,84%,67%)]"
-                }`}></div>
-                
+                <div
+                  className={`absolute -left-10 w-4 h-4 rounded-full animate-pulse ${
+                    experience.color === "neon-cyan"
+                      ? "bg-[hsl(193,100%,50%)]"
+                      : "bg-[hsl(258,84%,67%)]"
+                  }`}
+                ></div>
+
                 <Card className="glass-card rounded-xl">
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                      <h3 className={`text-xl font-bold ${
-                        experience.color === "neon-cyan" 
-                          ? "text-[hsl(193,100%,50%)]" 
-                          : "text-[hsl(258,84%,67%)]"
-                      }`}>
+                      <h3
+                        className={`text-xl font-bold ${
+                          experience.color === "neon-cyan"
+                            ? "text-[hsl(193,100%,50%)]"
+                            : "text-[hsl(258,84%,67%)]"
+                        }`}
+                      >
                         {experience.title}
                       </h3>
                       <span className="text-[hsl(210,40%,89%)] text-sm">
@@ -90,14 +97,16 @@ export function ExperienceSection() {
                     <h4 className="text-lg font-semibold mb-4 text-white">
                       {experience.company}
                     </h4>
-                    
+
                     {experience.image ? (
                       <div className="grid md:grid-cols-3 gap-6 items-start">
                         <div className="md:col-span-2">
                           <ul className="text-[hsl(210,40%,89%)] space-y-2">
                             {experience.description.map((item, itemIndex) => (
                               <li key={itemIndex} className="flex items-start">
-                                <span className="text-[hsl(193,100%,50%)] mr-2">•</span>
+                                <span className="text-[hsl(193,100%,50%)] mr-2">
+                                  •
+                                </span>
                                 <span>{item}</span>
                               </li>
                             ))}
@@ -117,7 +126,9 @@ export function ExperienceSection() {
                       <ul className="text-[hsl(210,40%,89%)] space-y-2">
                         {experience.description.map((item, itemIndex) => (
                           <li key={itemIndex} className="flex items-start">
-                            <span className="text-[hsl(193,100%,50%)] mr-2">•</span>
+                            <span className="text-[hsl(193,100%,50%)] mr-2">
+                              •
+                            </span>
                             <span>{item}</span>
                           </li>
                         ))}

@@ -6,46 +6,58 @@ const competitions = [
   {
     title: "🥈 2nd Place - Unfold 2023",
     subtitle: "Push & Router Tracks",
-    description: "Built 'Coinvo,' a decentralized chat app with crypto payments and token-gated group access using Polygon blockchain.",
+    description:
+      "Built 'Coinvo,' a decentralized chat app with crypto payments and token-gated group access using Polygon blockchain.",
     icon: Trophy,
-    color: "yellow"
+    color: "yellow",
   },
   {
     title: "🥈 Finalists - SAUVC 2024",
-    subtitle: "Team Nira, Singapore",
-    description: "Designed and deployed an autonomous underwater vehicle; led vision and systems architecture for international competition.",
+    subtitle: "Team Saaral, Singapore",
+    description:
+      "Designed and deployed an autonomous underwater vehicle; led vision and systems architecture for international competition.",
     icon: Medal,
-    color: "silver"
+    color: "silver",
   },
   {
     title: "🌐 Global Finalists (3rd Worldwide)",
     subtitle: "MATE ROV Virtual Challenge",
-    description: "Contributed to simulation design, testing pipelines, and control systems for autonomous underwater robotics.",
+    description:
+      "Contributed to simulation design, testing pipelines, and control systems for autonomous underwater robotics.",
     icon: Globe,
-    color: "blue"
+    color: "blue",
   },
   {
     title: "🏆 Top 100 Finalist",
     subtitle: "Create the Future Design Contest",
-    description: "Proposed a hybrid AUV-ROV platform for underwater exploration and aquaculture monitoring (Tech Briefs, USA).",
+    description:
+      "Proposed a hybrid AUV-ROV platform for underwater exploration and aquaculture monitoring (Tech Briefs, USA).",
     icon: Award,
-    color: "orange"
-  }
+    color: "orange",
+  },
 ];
 
 const getIconColor = (color: string) => {
   switch (color) {
-    case "yellow": return "text-yellow-400";
-    case "silver": return "text-gray-400";
-    case "blue": return "text-blue-400";
-    case "orange": return "text-orange-400";
-    default: return "text-[hsl(193,100%,50%)]";
+    case "yellow":
+      return "text-yellow-400";
+    case "silver":
+      return "text-gray-400";
+    case "blue":
+      return "text-blue-400";
+    case "orange":
+      return "text-orange-400";
+    default:
+      return "text-[hsl(193,100%,50%)]";
   }
 };
 
 export function CompetitionsSection() {
   return (
-    <section id="competitions" className="py-20 bg-gradient-to-br from-[hsl(232,13%,12%)] to-[hsl(225,58%,8%)]">
+    <section
+      id="competitions"
+      className="py-20 bg-gradient-to-br from-[hsl(232,13%,12%)] to-[hsl(225,58%,8%)]"
+    >
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text"
@@ -56,7 +68,7 @@ export function CompetitionsSection() {
         >
           Competitions & Achievements
         </motion.h2>
-        
+
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
           {competitions.map((competition, index) => (
             <motion.div
@@ -69,11 +81,17 @@ export function CompetitionsSection() {
               <Card className="glass-card rounded-xl hover:shadow-xl transition-all h-full">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <competition.icon className={`h-8 w-8 mr-4 ${getIconColor(competition.color)}`} />
+                    <competition.icon
+                      className={`h-8 w-8 mr-4 ${getIconColor(competition.color)}`}
+                    />
                     <div>
-                      <h3 className={`text-xl font-bold ${
-                        index % 2 === 0 ? "text-[hsl(193,100%,50%)]" : "text-[hsl(258,84%,67%)]"
-                      }`}>
+                      <h3
+                        className={`text-xl font-bold ${
+                          index % 2 === 0
+                            ? "text-[hsl(193,100%,50%)]"
+                            : "text-[hsl(258,84%,67%)]"
+                        }`}
+                      >
                         {competition.title}
                       </h3>
                       <p className="text-[hsl(210,40%,89%)] text-sm">
