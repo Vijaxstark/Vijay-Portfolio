@@ -7,12 +7,7 @@ const skillCategories = [
   {
     title: "Programming Languages",
     icon: Code,
-    skills: [
-      { name: "Python", level: 95 },
-      { name: "C++", level: 80 },
-      { name: "JavaScript", level: 75 },
-      { name: "HTML", level: 85 }
-    ]
+    skills: ["Python", "C++", "JavaScript", "HTML"]
   },
   {
     title: "ML & Deep Learning",
@@ -63,42 +58,20 @@ export function SkillsSection() {
                     {category.title}
                   </h3>
                   
-                  {category.title === "Programming Languages" ? (
-                    <div className="space-y-4">
-                      {(category.skills as Array<{name: string, level: number}>).map((skill, skillIndex) => (
-                        <div key={skillIndex}>
-                          <div className="flex justify-between items-center mb-2">
-                            <span className="text-white text-sm">{skill.name}</span>
-                            <span className="text-[hsl(210,40%,89%)] text-xs">{skill.level}%</span>
-                          </div>
-                          <div className="w-full bg-gray-700 rounded-full h-2">
-                            <motion.div
-                              className="skill-bar h-2 rounded-full"
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${skill.level}%` }}
-                              transition={{ duration: 1, delay: skillIndex * 0.1 }}
-                              viewport={{ once: true }}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="flex flex-wrap gap-2">
-                      {(category.skills as string[]).map((skill, skillIndex) => (
-                        <Badge
-                          key={skillIndex}
-                          className={`text-xs ${
-                            skillIndex % 2 === 0
-                              ? "bg-[hsl(193,100%,50%)]/20 text-[hsl(193,100%,50%)] border-[hsl(193,100%,50%)]/30"
-                              : "bg-[hsl(258,84%,67%)]/20 text-[hsl(258,84%,67%)] border-[hsl(258,84%,67%)]/30"
-                          }`}
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex flex-wrap gap-2">
+                    {(category.skills as string[]).map((skill, skillIndex) => (
+                      <Badge
+                        key={skillIndex}
+                        className={`text-xs ${
+                          skillIndex % 2 === 0
+                            ? "bg-[hsl(193,100%,50%)]/20 text-[hsl(193,100%,50%)] border-[hsl(193,100%,50%)]/30"
+                            : "bg-[hsl(258,84%,67%)]/20 text-[hsl(258,84%,67%)] border-[hsl(258,84%,67%)]/30"
+                        }`}
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
